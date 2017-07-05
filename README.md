@@ -23,16 +23,32 @@ a simple distribute tensorflow framework template
       
 ## how to use template
 
-dist_train_example_model.py is  nearly a normal tf model 
-  but two litte exceptions,
-  
-  - a. use the cluster device info: 
+  use the cluster_helper to get device info and then create session: 
    
       ```
-      device_info, worker_spec, num_workers = get_cluster_device_info()
+      import cluster_helper
+      with tf.device(cluster_helper.get_cluster_device_info()):
+            ...
+            train_step, optimizer = build_graph()
+            sess, train_step = get_sess(worker_spec, num_workers, opt, loss, global_step)
+            
       ```
-  - b. use a well configured session with get_sess from ```cluster_helper.py```:
-  
+      
+## FAQ
+
+1. Graph finalized error
+
     ```
-    sess, train_step = get_sess(worker_spec, num_workers, opt, loss, global_step)
+        raise RuntimeError("Graph is finalized and cannot be modified.")
+    RuntimeError: Graph is finalized and cannot be modified.
     ```
+   Fix:
+   comment original session init code
+   ```python
+   #     sess.run(tf.global_variables_initializer())
+   #     sess.run(tf.initialize_all_variables())
+   ```
+ 
+
+
+
