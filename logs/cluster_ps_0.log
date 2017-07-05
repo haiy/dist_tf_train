@@ -1,8 +1,45 @@
-2017-07-04 19:44:28.863854: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-04 19:44:28.864125: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-04 19:44:28.864147: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-04 19:44:28.864156: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-04 19:44:28.864163: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-04 19:44:28.875004: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:200] Initialize GrpcChannelCache for job worker -> {0 -> localhost:2223, 1 -> localhost:2224}
-2017-07-04 19:44:28.875030: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:200] Initialize GrpcChannelCache for job ps -> {0 -> localhost:2222}
-2017-07-04 19:44:28.875431: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:240] Started server with target: grpc://localhost:2222
+2017-07-05 15:02:24.423290: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 15:02:24.423322: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 15:02:24.423330: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 15:02:24.423336: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 15:02:24.423342: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 15:02:24.435503: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:200] Initialize GrpcChannelCache for job worker -> {0 -> localhost:2223, 1 -> localhost:2224}
+2017-07-05 15:02:24.435559: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:200] Initialize GrpcChannelCache for job ps -> {0 -> localhost:2222}
+2017-07-05 15:02:24.435946: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:240] Started server with target: grpc://localhost:2222
+2017-07-05 15:16:35.008965: W tensorflow/core/framework/op_kernel.cc:1152] Invalid argument: You must feed a value for placeholder tensor 'dropout_keep_prob' with dtype float
+	 [[Node: dropout_keep_prob = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:worker/replica:0/task:0/cpu:0"]()]]
+	 [[Node: input_x1_S813 = _Recv[client_terminated=false, recv_device="/job:ps/replica:0/task:0/cpu:0", send_device="/job:worker/replica:0/task:0/cpu:0", send_device_incarnation=7198134014695014574, tensor_name="edge_2029_input_x1", tensor_type=DT_INT32, _device="/job:ps/replica:0/task:0/cpu:0"]()]]
+2017-07-05 15:16:35.009179: W tensorflow/core/framework/op_kernel.cc:1152] Invalid argument: You must feed a value for placeholder tensor 'dropout_keep_prob' with dtype float
+	 [[Node: dropout_keep_prob = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:worker/replica:0/task:0/cpu:0"]()]]
+	 [[Node: input_x1_S813 = _Recv[client_terminated=false, recv_device="/job:ps/replica:0/task:0/cpu:0", send_device="/job:worker/replica:0/task:0/cpu:0", send_device_incarnation=7198134014695014574, tensor_name="edge_2029_input_x1", tensor_type=DT_INT32, _device="/job:ps/replica:0/task:0/cpu:0"]()]]
+2017-07-05 15:16:35.009224: W tensorflow/core/framework/op_kernel.cc:1152] Invalid argument: You must feed a value for placeholder tensor 'dropout_keep_prob' with dtype float
+	 [[Node: dropout_keep_prob = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:worker/replica:0/task:0/cpu:0"]()]]
+	 [[Node: input_x1_S813 = _Recv[client_terminated=false, recv_device="/job:ps/replica:0/task:0/cpu:0", send_device="/job:worker/replica:0/task:0/cpu:0", send_device_incarnation=7198134014695014574, tensor_name="edge_2029_input_x1", tensor_type=DT_INT32, _device="/job:ps/replica:0/task:0/cpu:0"]()]]
+2017-07-05 15:16:35.009263: W tensorflow/core/framework/op_kernel.cc:1152] Invalid argument: You must feed a value for placeholder tensor 'dropout_keep_prob' with dtype float
+	 [[Node: dropout_keep_prob = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:worker/replica:0/task:0/cpu:0"]()]]
+	 [[Node: input_x1_S813 = _Recv[client_terminated=false, recv_device="/job:ps/replica:0/task:0/cpu:0", send_device="/job:worker/replica:0/task:0/cpu:0", send_device_incarnation=7198134014695014574, tensor_name="edge_2029_input_x1", tensor_type=DT_INT32, _device="/job:ps/replica:0/task:0/cpu:0"]()]]
+2017-07-05 15:16:35.009300: W tensorflow/core/framework/op_kernel.cc:1152] Invalid argument: You must feed a value for placeholder tensor 'dropout_keep_prob' with dtype float
+	 [[Node: dropout_keep_prob = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:worker/replica:0/task:0/cpu:0"]()]]
+	 [[Node: input_x1_S813 = _Recv[client_terminated=false, recv_device="/job:ps/replica:0/task:0/cpu:0", send_device="/job:worker/replica:0/task:0/cpu:0", send_device_incarnation=7198134014695014574, tensor_name="edge_2029_input_x1", tensor_type=DT_INT32, _device="/job:ps/replica:0/task:0/cpu:0"]()]]
+2017-07-05 15:16:35.009335: W tensorflow/core/framework/op_kernel.cc:1152] Invalid argument: You must feed a value for placeholder tensor 'dropout_keep_prob' with dtype float
+	 [[Node: dropout_keep_prob = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:worker/replica:0/task:0/cpu:0"]()]]
+	 [[Node: input_x1_S813 = _Recv[client_terminated=false, recv_device="/job:ps/replica:0/task:0/cpu:0", send_device="/job:worker/replica:0/task:0/cpu:0", send_device_incarnation=7198134014695014574, tensor_name="edge_2029_input_x1", tensor_type=DT_INT32, _device="/job:ps/replica:0/task:0/cpu:0"]()]]
+2017-07-05 15:16:35.009371: W tensorflow/core/framework/op_kernel.cc:1152] Invalid argument: You must feed a value for placeholder tensor 'dropout_keep_prob' with dtype float
+	 [[Node: dropout_keep_prob = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:worker/replica:0/task:0/cpu:0"]()]]
+	 [[Node: input_x1_S813 = _Recv[client_terminated=false, recv_device="/job:ps/replica:0/task:0/cpu:0", send_device="/job:worker/replica:0/task:0/cpu:0", send_device_incarnation=7198134014695014574, tensor_name="edge_2029_input_x1", tensor_type=DT_INT32, _device="/job:ps/replica:0/task:0/cpu:0"]()]]
+2017-07-05 15:16:35.009408: W tensorflow/core/framework/op_kernel.cc:1152] Invalid argument: You must feed a value for placeholder tensor 'dropout_keep_prob' with dtype float
+	 [[Node: dropout_keep_prob = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:worker/replica:0/task:0/cpu:0"]()]]
+	 [[Node: input_x1_S813 = _Recv[client_terminated=false, recv_device="/job:ps/replica:0/task:0/cpu:0", send_device="/job:worker/replica:0/task:0/cpu:0", send_device_incarnation=7198134014695014574, tensor_name="edge_2029_input_x1", tensor_type=DT_INT32, _device="/job:ps/replica:0/task:0/cpu:0"]()]]
+2017-07-05 15:16:35.009498: W tensorflow/core/framework/op_kernel.cc:1152] Invalid argument: You must feed a value for placeholder tensor 'dropout_keep_prob' with dtype float
+	 [[Node: dropout_keep_prob = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:worker/replica:0/task:0/cpu:0"]()]]
+	 [[Node: input_x1_S813 = _Recv[client_terminated=false, recv_device="/job:ps/replica:0/task:0/cpu:0", send_device="/job:worker/replica:0/task:0/cpu:0", send_device_incarnation=7198134014695014574, tensor_name="edge_2029_input_x1", tensor_type=DT_INT32, _device="/job:ps/replica:0/task:0/cpu:0"]()]]
+2017-07-05 15:16:35.009589: W tensorflow/core/framework/op_kernel.cc:1152] Invalid argument: You must feed a value for placeholder tensor 'dropout_keep_prob' with dtype float
+	 [[Node: dropout_keep_prob = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:worker/replica:0/task:0/cpu:0"]()]]
+	 [[Node: input_x1_S813 = _Recv[client_terminated=false, recv_device="/job:ps/replica:0/task:0/cpu:0", send_device="/job:worker/replica:0/task:0/cpu:0", send_device_incarnation=7198134014695014574, tensor_name="edge_2029_input_x1", tensor_type=DT_INT32, _device="/job:ps/replica:0/task:0/cpu:0"]()]]
+2017-07-05 15:16:35.009601: W tensorflow/core/framework/op_kernel.cc:1152] Invalid argument: You must feed a value for placeholder tensor 'dropout_keep_prob' with dtype float
+	 [[Node: dropout_keep_prob = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:worker/replica:0/task:0/cpu:0"]()]]
+	 [[Node: input_x1_S813 = _Recv[client_terminated=false, recv_device="/job:ps/replica:0/task:0/cpu:0", send_device="/job:worker/replica:0/task:0/cpu:0", send_device_incarnation=7198134014695014574, tensor_name="edge_2029_input_x1", tensor_type=DT_INT32, _device="/job:ps/replica:0/task:0/cpu:0"]()]]
+2017-07-05 16:26:23.122605: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Cleanup 113458708824998379
+2017-07-05 16:26:23.122605: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Cleanup 113458708824998379
+2017-07-05 16:26:23.122605: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Cleanup 113458708824998379
+E0705 16:28:10.400817000 123145308205056 parsing.c:801] ignoring out of order new grpc_chttp2_stream request on server; last grpc_chttp2_stream id=98431, new grpc_chttp2_stream id=98429

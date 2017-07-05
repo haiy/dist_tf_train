@@ -11,7 +11,7 @@ WORKER_HOSTS=localhost:2223,localhost:2224
 python3 dist_train_example_model.py \
     --data_dir="example_train_data/part_1" \
     --job_name=worker \
-    --train_steps=500 \
+    --train_steps=2500 \
     --sync_replas=True \
     --log_dir=$LOG_DIR \
     --ps_hosts ${PS_HOSTS} \
@@ -23,7 +23,7 @@ python3 dist_train_example_model.py \
 python3 dist_train_example_model.py \
     --data_dir="example_train_data/part_2" \
     --job_name=worker \
-    --train_steps=500 \
+    --train_steps=2500 \
     --sync_replas=True \
     --log_dir=$LOG_DIR \
     --ps_hosts ${PS_HOSTS} \

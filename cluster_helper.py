@@ -22,40 +22,43 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import tempfile
-import time
 
 import tensorflow as tf
 
-flags = tf.app.flags
+FLAGS = tf.flags.FLAGS
 
-
-flags.DEFINE_integer("task_index", 0,
+tf.flags.DEFINE_integer("task_index", 0,
                      "Worker task index, should be >= 0. task_index=0 is "
                      "the master worker task the performs the variable "
                      "initialization ")
-flags.DEFINE_integer("num_gpus", 0,
+tf.flags.DEFINE_integer("num_gpus", 0,
                      "Total number of gpus for each machine."
                      "If you don't use GPU, please set it to '0'")
-flags.DEFINE_integer("replicas_to_aggregate", None,
+tf.flags.DEFINE_integer("replicas_to_aggregate", None,
                      "Number of replicas to aggregate before parameter update"
                      "is applied (For sync_replicas mode only; default: "
                      "num_workers)")
-flags.DEFINE_boolean("sync_replicas", False,
+tf.flags.DEFINE_boolean("sync_replicas", False,
                      "Use the sync_replicas (synchronized replicas) mode, "
                      "wherein the parameter updates from workers are aggregated "
                      "before applied to avoid stale gradients")
-flags.DEFINE_boolean("existing_servers", True, "Whether servers already exists. If True, "
+tf.flags.DEFINE_boolean("existing_servers", True, "Whether servers already exists. If True, "
                                                "will use the worker hosts via their GRPC URLs (one client process "
                                                "per worker host). Otherwise, will create an in-process TensorFlow "
                                                "server.")
-flags.DEFINE_string("ps_hosts", "localhost:2222",
+tf.flags.DEFINE_string("ps_hosts", "localhost:2222",
                     "Comma-separated list of hostname:port pairs")
-flags.DEFINE_string("worker_hosts", "localhost:2223,localhost:2224",
+tf.flags.DEFINE_string("worker_hosts", "localhost:2223,localhost:2224",
                     "Comma-separated list of hostname:port pairs")
-flags.DEFINE_string("job_name", "worker", "job name: worker or ps")
-FLAGS = flags.FLAGS
+tf.flags.DEFINE_string("job_name", "worker", "job name: worker or ps")
+tf.flags.DEFINE_string("log_dir", "../logs", "run log ouput and checkpoint dir")
 
+
+
+def _get_worker_info():
+    worker_spec = FLAGS.worker_hosts.split(",")
+    num_workers = len(worker_spec)
+    return worker_spec, num_workers
 
 def get_cluster_device_info():
     if FLAGS.job_name is None or FLAGS.job_name == "":
@@ -64,20 +67,25 @@ def get_cluster_device_info():
         raise ValueError("Must specify an explicit `task_index`")
     print("job name = %s" % FLAGS.job_name)
     print("task index = %d" % FLAGS.task_index)
-
+    worker_spec, num_workers = _get_worker_info()
     # Construct the cluster and start the server
     ps_spec = FLAGS.ps_hosts.split(",")
-    worker_spec = FLAGS.worker_hosts.split(",")
-    num_workers = len(worker_spec)
     cluster = tf.train.ClusterSpec({"ps": ps_spec, "worker": worker_spec})
     worker_device = "/job:worker/task:%d" % (FLAGS.task_index)
     device_info = tf.train.replica_device_setter(worker_device=worker_device,cluster=cluster)
-    return device_info, worker_spec, num_workers
+    return device_info
 
-def get_sess(worker_spec, num_workers, opt, loss, global_step):
+def get_sess( opt, loss, global_step, checkpoint_dir):
+    worker_spec, num_workers = _get_worker_info()
     is_chief = (FLAGS.task_index == 0)
     init_op = tf.global_variables_initializer()
-    train_dir = FLAGS.log_dir
+    if checkpoint_dir:
+        train_dir = checkpoint_dir
+    elif FLAGS.log_dir:
+        train_dir = FLAGS.log_dir
+    else:
+        raise ValueError("Must set checkpoint dir!")
+
     sess_config = tf.ConfigProto(allow_soft_placement=True,log_device_placement=False,
         device_filters=["/job:ps", "/job:worker/task:%d" % FLAGS.task_index])
 

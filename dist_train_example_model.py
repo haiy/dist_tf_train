@@ -8,14 +8,16 @@ import time
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 
-from cluster_helper import flags, FLAGS, get_cluster_device_info, get_sess
+from cluster_helper import  get_cluster_device_info, get_sess
 
-flags.DEFINE_integer("train_steps", 200,
+FLAGS = tf.app.flags.FLAGS
+
+tf.flags.DEFINE_integer("train_steps", 200,
                      "Number of (global) training steps to perform")
-flags.DEFINE_integer("batch_size", 100, "Training batch size")
-flags.DEFINE_string("data_dir", "./train_data",
+tf.flags.DEFINE_integer("batch_size", 100, "Training batch size")
+tf.flags.DEFINE_string("data_dir", "./train_data",
                     "Directory for storing training data")
-flags.DEFINE_string("log_dir", "./", "Directory for storing checkpoint data dir")
+
 
 IMAGE_PIXELS = 28
 mnist = None
@@ -82,11 +84,11 @@ def model_graph(device_info):
 
 def main(args):
     # get the cluster info
-    device_info, worker_spec, num_workers = get_cluster_device_info()
+    device_info = get_cluster_device_info()
     x, y_, loss, train_step, global_step, opt = model_graph(device_info)
 
     # get needed session and special treat for opt
-    sess, train_step = get_sess(worker_spec, num_workers, opt, loss, global_step)
+    sess, train_step = get_sess(opt, loss, global_step, FLAGS.log_dir)
 
     time_begin = time.time()
     print("Training begins @ %f" % time_begin)
@@ -113,7 +115,6 @@ def main(args):
     val_xent = sess.run(loss, feed_dict=val_feed)
     print("After %d training step(s), validation cross entropy = %g" %
           (FLAGS.train_steps, val_xent))
-
 
 if __name__ == '__main__':
     tf.app.run()
