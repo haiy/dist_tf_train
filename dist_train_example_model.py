@@ -5,10 +5,12 @@ from __future__ import print_function
 
 import math
 import time
+
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 
-from cluster_helper import  get_cluster_device_info, get_sess
+#导入集群的帮助函数
+from cluster.cluster_helper import  get_cluster_device_info, get_sess
 
 FLAGS = tf.app.flags.FLAGS
 
@@ -56,10 +58,6 @@ def get_validate_data():
 
 
 def model_graph(device_info):
-    """
-    build the graph
-    :return: x, y_, loss, train_step, global_step, opt
-    """
     with tf.device(device_info):
         x = tf.placeholder(tf.float32, [None, IMAGE_PIXELS * IMAGE_PIXELS])
         y_ = tf.placeholder(tf.float32, [None, 10])

@@ -1,57 +1,21 @@
-2017-07-05 15:02:24.418791: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-05 15:02:24.418821: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-05 15:02:24.418829: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-05 15:02:24.418835: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-05 15:02:24.418843: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-05 15:02:24.430857: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:200] Initialize GrpcChannelCache for job worker -> {0 -> localhost:2223, 1 -> localhost:2224}
-2017-07-05 15:02:24.430889: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:200] Initialize GrpcChannelCache for job ps -> {0 -> localhost:2222}
-2017-07-05 15:02:24.431223: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:240] Started server with target: grpc://localhost:2223
-2017-07-05 15:03:05.766756: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session ab4b29f2e130334f with config: 
+2017-07-05 17:34:59.016677: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 17:34:59.016711: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 17:34:59.016721: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 17:34:59.016729: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 17:34:59.016737: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 17:34:59.032093: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:200] Initialize GrpcChannelCache for job worker -> {0 -> localhost:2223, 1 -> localhost:2224}
+2017-07-05 17:34:59.032117: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:200] Initialize GrpcChannelCache for job ps -> {0 -> localhost:2222}
+2017-07-05 17:34:59.032484: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:240] Started server with target: grpc://localhost:2223
+2017-07-05 17:35:37.544229: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session 7261f940ac4d0a3d with config: 
 device_filters: "/job:ps"
 device_filters: "/job:worker/task:0"
 allow_soft_placement: true
 
-2017-07-05 15:16:18.063240: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session c5880277bb51a42b with config: 
-device_filters: "/job:ps"
-device_filters: "/job:worker/task:0"
-allow_soft_placement: true
-
-2017-07-05 15:19:35.900962: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session f6747d51c5a5d884 with config: 
-device_filters: "/job:ps"
-device_filters: "/job:worker/task:0"
-allow_soft_placement: true
-
-2017-07-05 15:22:59.219086: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session 4a4ea6edf0dd528e with config: 
-device_filters: "/job:ps"
-device_filters: "/job:worker/task:0"
-allow_soft_placement: true
-
-2017-07-05 15:25:21.379665: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session 478305c9ca81eb2a with config: 
-device_filters: "/job:ps"
-device_filters: "/job:worker/task:0"
-allow_soft_placement: true
-
-2017-07-05 15:33:33.542900: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session c2ec4f941ce462c0 with config: 
-device_filters: "/job:ps"
-device_filters: "/job:worker/task:0"
-allow_soft_placement: true
-
-2017-07-05 16:03:58.239922: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session 3ee9228ad6558df4 with config: 
-device_filters: "/job:ps"
-device_filters: "/job:worker/task:0"
-allow_soft_placement: true
-
-2017-07-05 16:26:06.664776: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session 4860a4db2b66a4da with config: 
-device_filters: "/job:ps"
-device_filters: "/job:worker/task:0"
-allow_soft_placement: true
-
-2017-07-05 16:27:52.320151: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session 9b6704858b6b99c8 with config: 
-device_filters: "/job:ps"
-device_filters: "/job:worker/task:0"
-allow_soft_placement: true
-
-2017-07-05 16:50:18.047131: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session bc16a32613185c84 with config: 
+2017-07-05 17:39:31.011466: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 142035052605036397
+2017-07-05 17:39:31.012648: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 142035052605036397
+2017-07-05 17:39:31.012902: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 142035052605036397
+2017-07-05 17:39:33.161272: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 142035052605036397
+2017-07-05 17:40:59.716554: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session 6fe6fcdde6214565 with config: 
 device_filters: "/job:ps"
 device_filters: "/job:worker/task:0"
 allow_soft_placement: true

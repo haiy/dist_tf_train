@@ -1,32 +1,82 @@
-2017-07-05 15:02:24.426335: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-05 15:02:24.426541: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-05 15:02:24.426558: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-05 15:02:24.426564: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-05 15:02:24.426671: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-05 15:02:24.437690: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:200] Initialize GrpcChannelCache for job worker -> {0 -> localhost:2223, 1 -> localhost:2224}
-2017-07-05 15:02:24.437710: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:200] Initialize GrpcChannelCache for job ps -> {0 -> localhost:2222}
-2017-07-05 15:02:24.438188: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:240] Started server with target: grpc://localhost:2224
-2017-07-05 15:29:50.807826: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session b323d488f98d06a1 with config: 
+2017-07-05 17:34:59.011496: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 17:34:59.011520: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 17:34:59.011527: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 17:34:59.011533: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 17:34:59.011540: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 17:34:59.026004: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:200] Initialize GrpcChannelCache for job worker -> {0 -> localhost:2223, 1 -> localhost:2224}
+2017-07-05 17:34:59.026522: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:200] Initialize GrpcChannelCache for job ps -> {0 -> localhost:2222}
+2017-07-05 17:34:59.027551: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:240] Started server with target: grpc://localhost:2224
+2017-07-05 17:35:37.375646: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session d157e83e9b1dc67a with config: 
 device_filters: "/job:ps"
 device_filters: "/job:worker/task:1"
 allow_soft_placement: true
 
-2017-07-05 15:33:33.514540: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session 0517fa448dbac941 with config: 
+2017-07-05 17:35:42.708934: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session 05cbdba7473b62ad with config: 
 device_filters: "/job:ps"
 device_filters: "/job:worker/task:1"
 allow_soft_placement: true
 
-2017-07-05 15:33:35.154124: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session 7658b3d475acff36 with config: 
-device_filters: "/job:ps"
-device_filters: "/job:worker/task:1"
-allow_soft_placement: true
-
-2017-07-05 15:33:40.446851: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session 7a2fd32164eef8ce with config: 
-device_filters: "/job:ps"
-device_filters: "/job:worker/task:1"
-allow_soft_placement: true
-
-2017-07-05 16:50:18.058645: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session 2887b51e93ee81bc with config: 
+2017-07-05 17:39:30.816201: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:30.816379: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:30.918704: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:30.919115: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.066914: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.067033: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.120410: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.123448: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.418423: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.418559: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.561555: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.561609: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.702343: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.703227: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.870296: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.870351: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.997526: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.998796: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.998900: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:31.999149: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:32.302086: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:32.302154: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:32.311596: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:32.311713: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:32.451140: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:32.451302: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:32.743453: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:32.743509: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:32.786219: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:32.786282: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:32.840783: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:32.841049: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.052862: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.052912: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.110088: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.110142: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.134998: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.135059: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.194170: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.194237: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.243316: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.243374: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.270589: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.270789: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.353206: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.353284: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.375553: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.375667: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.419742: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.419959: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.668010: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.668244: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.668289: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.816894: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.817664: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.817714: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.817741: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.929681: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.942938: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:39:33.989979: W tensorflow/core/framework/op_kernel.cc:1152] Aborted: Step 87454151289674574
+2017-07-05 17:41:27.368619: I tensorflow/core/distributed_runtime/master_session.cc:1012] Start master session 062b8c50e881fc19 with config: 
 device_filters: "/job:ps"
 device_filters: "/job:worker/task:1"
 allow_soft_placement: true
