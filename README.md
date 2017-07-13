@@ -1,5 +1,3 @@
-# dist_tf_train
-
 ## 如何使用tf分布式
 
 
