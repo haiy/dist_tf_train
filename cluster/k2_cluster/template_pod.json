@@ -1,0 +1,83 @@
+
+  {
+
+    "name": "tf-worker-2",
+    "namespace": "ai",
+    "service": {
+      "name": "tf-worker-2",
+      "namespace": "ai",
+      "spec": {
+        "ports": [
+          {
+            "service_port": 2222,
+            "container_port": 2222
+          }
+        ],
+        "labels": [
+          {
+            "key": "app",
+            "value": "ai-tf-worker-2"
+          }
+        ]
+      },
+      "legacy_domain": "tf-worker-2.wacai.info"
+    },
+    "deployment": {
+      "name": "tf-worker-2",
+      "namespace": "ai",
+      "spec": {
+        "replicas": 1,
+        "labels": [
+          {
+            "key": "app",
+            "value": "ai-tf-worker-2"
+          }
+        ],
+        "strategy": {
+          "type": "rollingupdate"
+        },
+        "ready_seconds": 30
+      }
+    },
+    "pod": {
+      "name": "tf-worker-2",
+      "namespace": "ai",
+      "spec": {
+        "labels": [
+          {
+            "key": "app",
+            "value": "ai-tf-worker-2"
+          }
+        ],
+        "envs": [
+          {
+            "key": "APP_NAME",
+            "value": "tf-worker-2"
+          },
+          {
+            "key": "POD_NAMESPACE",
+            "value": "ai"
+          },
+          {
+            "key": "CLUSTER_INFO",
+            "value": "worker|tf-worker-1:2222;tf-worker-2:2222,ps|tf-ps-1:2222"
+          },
+          {
+            "key": "JOB_NAME",
+            "value": "worker"
+          },
+          {
+            "key": "TASK_ID",
+            "value": "1"
+          }
+        ],
+        "cpu": "1",
+        "memory": "2G",
+        "health_check": {},
+        "readiness_probe": {},
+        "image": "dockerhub.test.wacai.info/wac.ai/tf_grpc_server:latest"
+      }
+    },
+    "created_time": "2017-06-13T17:56:28.494+08:00",
+    "updated_time": "2017-06-13T17:56:28.494+08:00"
+  }
