@@ -51,4 +51,5 @@ a simple distribute tensorflow framework template
  
 
 
-
+Ref:
+[tensorflow dist_test](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/tools/dist_test)
